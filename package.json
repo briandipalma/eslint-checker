@@ -6,7 +6,7 @@
     "build": "traceur --dir src/ out/ --modules=commonjs --sourcemap"
   },
   "dependencies": {
-    "traceur": "0.0.33",
-    "eslint": "^0.5.1"
+    "eslint": "^0.5.1",
+    "traceur": "0.0.41"
   }
 }
