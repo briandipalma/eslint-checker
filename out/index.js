@@ -1,17 +1,17 @@
 "use strict";
-var __moduleName = "./src/index";
+Object.defineProperties(exports, {
+  checkFileWithESLint: {get: function() {
+      return checkFileWithESLint;
+    }},
+  __esModule: {value: true}
+});
 var join = $traceurRuntime.assertObject(require("path")).join;
 var eslint = $traceurRuntime.assertObject(require("eslint")).cli;
+var confPath = join(__dirname, "..", "conf", "eslint.json");
 function checkFileWithESLint(filePath) {
   eslint.execute({
     _: [filePath],
-    config: join(__dirname, "..", "conf", "eslint.json")
+    config: confPath
   });
 }
 ;
-module.exports = {
-  get checkFileWithESLint() {
-    return checkFileWithESLint;
-  },
-  __esModule: true
-};
